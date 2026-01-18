@@ -3,100 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paroisse Saint-Albert - Koupéla</title>
+    <title>Paroisse Saint Albert le Grand - Accueil</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
-        :root {
+        :root { 
             --primary-church: #1e3a2f; 
-            --gold-accent: #c5a059;   
-            --cream-bg: #fdfaf5;      
+            --gold-accent: #c5a059; 
+            --cream-bg: #fdfaf5; 
         }
-        
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--cream-bg); }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--cream-bg); 
+            scroll-behavior: smooth; 
+        }
         .serif { font-family: 'Playfair Display', serif; }
         .church-title { font-family: 'Cinzel', serif; letter-spacing: 2px; }
-        
         .bg-church { background-color: var(--primary-church); }
         .text-church { color: var(--primary-church); }
         .text-gold { color: var(--gold-accent); }
         .bg-gold { background-color: var(--gold-accent); }
-        .border-gold { border-color: var(--gold-accent); }
-
-        .hero-gradient {
-            background: linear-gradient(to bottom, rgba(30, 58, 47, 0.8), rgba(30, 58, 47, 0.4));
-        }
-
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(30, 58, 47, 0.8), rgba(30, 58, 47, 0.4)); }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- En-tête Institutionnel avec Logo -->
-    <header class="bg-church text-white border-b-4 border-gold sticky top-0 z-50">
+    <!-- En-tête -->
+    <header class="bg-church text-white border-b-4 border-gold sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center gap-4 mb-4 md:mb-0">
-                <!-- Utilisation du fichier logo.jpg disponible -->
-                <img src="logo.jpg" alt="[Image du Logo de la Paroisse]" class="w-14 h-14 object-contain rounded-full" onerror="this.src='https://via.placeholder.com/60/c5a059/ffffff?text=LOGO';">
-                <div class="text-center md:text-left">
-                    <h1 class="church-title text-xl md:text-2xl font-bold leading-none">Paroisse Saint-Albert</h1>
-                    <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gold mt-1">Archidiocèse de Koupéla</p>
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-church font-bold border-2 border-gold">
+                    SA
+                </div>
+                <div>
+                    <h1 class="church-title text-xl font-bold uppercase">Saint Albert</h1>
+                    <p class="text-[10px] uppercase tracking-[0.3em] text-gold text-center md:text-left">Archidiocèse de Koupéla</p>
                 </div>
             </div>
-            <nav class="flex gap-4 md:gap-8 text-[11px] uppercase font-bold tracking-widest">
-                <a href="index.html" class="text-gold font-bold">Accueil</a>
-                <a href="#notre-paroisse" class="hover:text-gold transition">La Paroisse</a>
-                <a href="#rubriques" class="hover:text-gold transition">Rubriques</a>
-                <a href="#annonces" class="hover:text-gold transition">Annonces</a>
+            <nav class="flex gap-8 text-[11px] uppercase font-bold tracking-widest">
+                <a href="index.html" class="text-gold border-b border-gold pb-1">Accueil</a>
+                <a href="annonces.html" class="hover:text-gold transition">Annonces & Pèlerinage</a>
+                <a href="#liturgie" class="hover:text-gold transition">Horaires</a>
             </nav>
         </div>
     </header>
 
-    <!-- Section d'Accueil -->
-    <section class="relative h-[65vh] flex items-center justify-center text-center px-4 overflow-hidden">
-        <!-- Utilisation de eglise.jpg comme fond héroïque -->
-        <img src="eglise.jpg" alt="[Image de la Paroisse]" class="absolute inset-0 w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&q=80&w=1600';">
+    <!-- Section Hero -->
+    <section class="relative h-[80vh] flex items-center justify-center text-center px-4 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1548625361-125020a2f459?auto=format&fit=crop&q=80&w=1600" alt="[Image de l'Église]" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 hero-gradient"></div>
         
-        <div class="relative z-10 max-w-4xl border-2 border-white/20 p-8 md:p-12 backdrop-blur-[2px]">
-            <span class="text-gold font-bold uppercase tracking-[0.5em] text-xs mb-4 block">Église Famille de Dieu</span>
-            <h2 class="serif text-4xl md:text-7xl text-white italic mb-6 leading-tight">
-                « Jubilons et bâtissons la paix »
-            </h2>
-            <p class="text-white/90 text-sm md:text-lg font-light tracking-wide mb-8 italic">
-                Portail officiel de la communauté paroissiale de Koupéla.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#rubriques" class="bg-gold hover:bg-yellow-600 text-white px-10 py-3 rounded-sm font-bold uppercase text-xs tracking-widest transition shadow-lg">Explorer</a>
-                <a href="#annonces" class="bg-white/10 hover:bg-white/20 border border-white/50 text-white px-10 py-3 rounded-sm font-bold uppercase text-xs tracking-widest transition">Actualités</a>
+        <div class="relative z-10 max-w-4xl border-2 border-white/20 p-10 backdrop-blur-[2px] rounded-lg">
+            <span class="text-gold font-bold uppercase tracking-[0.5em] text-xs mb-4 block">Bienvenue à la Paroisse</span>
+            <h2 class="serif text-4xl md:text-6xl text-white italic mb-8">« Jubilons et bâtissons la paix »</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="annonces.html" class="bg-gold hover:bg-yellow-600 text-white px-10 py-4 rounded-sm font-bold uppercase text-xs tracking-widest transition shadow-xl">
+                    Voir les Annonces
+                </a>
+                <a href="#liturgie" class="border border-white text-white hover:bg-white hover:text-church px-10 py-4 rounded-sm font-bold uppercase text-xs tracking-widest transition">
+                    Horaires des Messes
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Section Présentation avec Photo de l'Église -->
-    <section id="notre-paroisse" class="py-20 bg-white">
+    <!-- Section Pèlerinage (Lien vers annonces.html) -->
+    <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <!-- Utilisation du fichier eglise.jpg -->
-                    <img src="eglise.jpg" alt="[Image de l'Église Paroissiale Saint-Albert]" class="rounded-sm shadow-2xl border-8 border-gray-50 w-full h-[400px] object-cover">
-                </div>
-                <div class="lg:w-1/2">
-                    <h3 class="church-title text-3xl text-church mb-6 uppercase">Notre Maison Commune</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed italic">
-                        La Paroisse Saint-Albert est un lieu de prière, de rencontre et de fraternité au cœur de l'archidiocèse de Koupéla. Que vous soyez de passage ou résident, vous y trouverez une Église Famille prête à vous accueillir.
+            <div class="max-w-5xl mx-auto bg-green-50 rounded-3xl p-8 md:p-12 border border-green-100 flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1">
+                    <h3 class="serif text-4xl text-church italic mb-6">Pèlerinage Daltenga 2026</h3>
+                    <p class="text-base text-gray-600 mb-8 leading-relaxed">
+                        Le grand rassemblement annuel approche ! Consultez le programme complet des célébrations sur notre page dédiée.
                     </p>
-                    <div class="grid grid-cols-2 gap-6 border-t border-gray-100 pt-8">
-                        <div>
-                            <span class="block text-gold font-bold text-xl uppercase">19XX</span>
-                            <span class="text-[10px] uppercase tracking-widest text-gray-400">Fondation</span>
+                    <a href="annonces.html#pelerinage" class="inline-flex items-center gap-3 bg-church text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-gold transition shadow-md">
+                        Détails du pèlerinage
+                    </a>
+                </div>
+                <div class="w-full md:w-2/5">
+                    <img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?auto=format&fit=crop&q=80&w=600" alt="[Image de Pèlerins]" class="rounded-2xl shadow-lg border-4 border-white object-cover h-64 w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Horaires Liturgiques -->
+    <section id="liturgie" class="py-24 bg-church text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="church-title text-3xl mb-16 text-gold">Horaires des Messes</h3>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+                <div class="bg-white/5 border border-white/10 p-10 rounded-2xl">
+                    <h4 class="serif text-2xl italic mb-6 text-gold">Dimanche</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-white/10 pb-2">
+                            <span>07h00</span>
+                            <span class="font-bold">Messe en Moore</span>
                         </div>
-                        <div>
-                            <span class="block text-gold font-bold text-xl uppercase">XX</span>
-                            <span class="text-[10px] uppercase tracking-widest text-gray-400">CCB Actives</span>
+                        <div class="flex justify-between">
+                            <span>09h00</span>
+                            <span class="font-bold">Messe en Français</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-10 rounded-2xl">
+                    <h4 class="serif text-2xl italic mb-6 text-gold">En Semaine</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-white/10 pb-2">
+                            <span>Lun - Ven</span>
+                            <span class="font-bold">05h45</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Samedi</span>
+                            <span class="font-bold">06h00</span>
                         </div>
                     </div>
                 </div>
@@ -104,89 +122,10 @@
         </div>
     </section>
 
-    <!-- Grille des Rubriques Principales -->
-    <section id="rubriques" class="py-20 container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h3 class="church-title text-3xl text-church mb-2 uppercase tracking-tighter">Rubriques du site</h3>
-            <div class="h-1 w-20 bg-gold mx-auto"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <a href="pelerinage.html" class="card-hover bg-white border border-gray-100 p-8 text-center transition-all group shadow-sm">
-                <div class="w-16 h-16 bg-church/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/10 transition">
-                    <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                </div>
-                <h4 class="font-bold text-church uppercase text-xs tracking-widest mb-3">Pèlerinage</h4>
-                <p class="text-[11px] text-gray-500 leading-relaxed">Daltenga 2026, thèmes et programmes.</p>
-            </a>
-
-            <a href="vie-paroissiale.html" class="card-hover bg-white border border-gray-100 p-8 text-center transition-all group shadow-sm">
-                <div class="w-16 h-16 bg-church/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/10 transition">
-                    <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-                </div>
-                <h4 class="font-bold text-church uppercase text-xs tracking-widest mb-3">Vie Paroissiale</h4>
-                <p class="text-[11px] text-gray-500 leading-relaxed">Mouvements, chorales et CCB.</p>
-            </a>
-
-            <a href="liturgie.html" class="card-hover bg-white border border-gray-100 p-8 text-center transition-all group shadow-sm">
-                <div class="w-16 h-16 bg-church/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/10 transition">
-                    <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                </div>
-                <h4 class="font-bold text-church uppercase text-xs tracking-widest mb-3">Liturgie</h4>
-                <p class="text-[11px] text-gray-500 leading-relaxed">Messes et services religieux.</p>
-            </a>
-
-            <a href="sacrements.html" class="card-hover bg-white border border-gray-100 p-8 text-center transition-all group shadow-sm">
-                <div class="w-16 h-16 bg-church/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/10 transition">
-                    <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"/></svg>
-                </div>
-                <h4 class="font-bold text-church uppercase text-xs tracking-widest mb-3">Sacrements</h4>
-                <p class="text-[11px] text-gray-500 leading-relaxed">Baptêmes et Mariages.</p>
-            </a>
-        </div>
-    </section>
-
-    <!-- Section Annonces -->
-    <section id="annonces" class="py-20 bg-church text-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-                <div>
-                    <h3 class="church-title text-3xl mb-2 uppercase tracking-tighter">Annonces</h3>
-                    <div class="h-1 w-20 bg-gold"></div>
-                </div>
-                <p class="text-gold font-bold italic serif tracking-wider">Dimanche 4 Mai 2025</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
-                <div class="bg-white/5 border border-white/10 p-6">
-                    <h5 class="font-bold text-gold mb-3 uppercase tracking-tighter">Liturgie</h5>
-                    <p class="opacity-80 italic">Quête spéciale pour les travaux de la paroisse.</p>
-                </div>
-                <div class="bg-white/5 border border-white/10 p-6">
-                    <h5 class="font-bold text-gold mb-3 uppercase tracking-tighter">Réunions</h5>
-                    <p class="opacity-80 italic">Rencontre du bureau des jeunes samedi à 16h.</p>
-                </div>
-                <div class="bg-white/5 border border-white/10 p-6">
-                    <h5 class="font-bold text-gold mb-3 uppercase tracking-tighter">Secrétariat</h5>
-                    <p class="opacity-80 italic">Permanence ouverte du lundi au vendredi.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Pied de page -->
-    <footer id="contact" class="py-16 bg-gray-100 border-t border-gray-200">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="church-title text-xl text-church mb-4 leading-none">Paroisse Saint-Albert - Koupéla</h2>
-            <div class="flex flex-wrap justify-center gap-6 md:gap-12 mb-12 mt-8">
-                <a href="#" class="text-church hover:text-gold transition font-bold uppercase text-[10px] tracking-[0.2em]">Secrétariat</a>
-                <a href="#" class="text-church hover:text-gold transition font-bold uppercase text-[10px] tracking-[0.2em]">Dons</a>
-                <a href="#" class="text-church hover:text-gold transition font-bold uppercase text-[10px] tracking-[0.2em]">Messes</a>
-            </div>
-            <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em]">
-                &copy; 2026 Archidiocèse de Koupéla
-            </p>
-        </div>
+    <footer class="py-12 bg-gray-50 border-t border-gray-200 text-center">
+        <p class="church-title text-church text-sm mb-2">Saint Albert le Grand</p>
+        <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em]">&copy; 2026 Archidiocèse de Koupéla</p>
     </footer>
 
 </body>
